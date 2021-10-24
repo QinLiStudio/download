@@ -13,7 +13,6 @@ docker run -d \
   -v <repo path>:/theme/Nginx-Fancyindex-Theme/ \
   -p 8000:80 \
   -e "DISABLE_AUTH=true" \
-
   --restart always \
   fraoustin/fancyindex \
 
