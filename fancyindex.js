@@ -195,8 +195,13 @@ arrayOfCurrentPath.forEach(function(element) {
 var templateItem = `
     <li class="mdl-list__item item">
         <span class="mdl-list__item-primary-content">
-            <span class="mdl-list__item-avatar specColor"><i class="material-icons">specIcon</i></span>
-            <a name="specLib" href="specHref">
+        
+        <span class="mdl-list__item-avatar specColor">
+            <a href="specHref"> 
+            <i class="material-icons">specIcon</i>
+            </a>
+        </span>
+        <a name="specLib" href="specHref">
             <span>
                 specLib
                 <span class="second_line">specInfo</span>
@@ -271,7 +276,7 @@ for (var i = 0; i < listOfItems.length; ++i) {
     document.getElementById("listItems").appendChild(
         htmlToElement(
             templateItem
-                .replace("specHref", href)
+                .replaceAll("specHref", href)
                 .replace("specIcon", icon)
                 //.replace("specSize",size)
                 //.replace("specDte",dte)
